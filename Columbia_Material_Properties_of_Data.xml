@@ -1,0 +1,719 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.1">
+  <description></description>
+  <groupId>135ca2a5-015d-1000-b75a-bdaf382c2568</groupId>
+  <name>Columbia Material Properties of Data</name>
+  <snippet>
+    <controllerServices>
+      <id>e8c4dd21-498a-325b-0000-000000000000</id>
+      <parentGroupId>645f8f2c-44e5-3e5a-0000-000000000000</parentGroupId>
+      <bundle>
+        <artifact>nifi-aws-nar</artifact>
+        <group>org.apache.nifi</group>
+        <version>1.2.0</version>
+      </bundle>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>default-credentials</key>
+          <value>
+            <name>default-credentials</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Access Key</key>
+          <value>
+            <name>Access Key</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Secret Key</key>
+          <value>
+            <name>Secret Key</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Credentials File</key>
+          <value>
+            <name>Credentials File</name>
+          </value>
+        </entry>
+        <entry>
+          <key>profile-name</key>
+          <value>
+            <name>profile-name</name>
+          </value>
+        </entry>
+        <entry>
+          <key>anonymous-credentials</key>
+          <value>
+            <name>anonymous-credentials</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Assume Role ARN</key>
+          <value>
+            <name>Assume Role ARN</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Assume Role Session Name</key>
+          <value>
+            <name>Assume Role Session Name</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Session Time</key>
+          <value>
+            <name>Session Time</name>
+          </value>
+        </entry>
+        <entry>
+          <key>assume-role-external-id</key>
+          <value>
+            <name>assume-role-external-id</name>
+          </value>
+        </entry>
+        <entry>
+          <key>assume-role-proxy-host</key>
+          <value>
+            <name>assume-role-proxy-host</name>
+          </value>
+        </entry>
+        <entry>
+          <key>assume-role-proxy-port</key>
+          <value>
+            <name>assume-role-proxy-port</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>NiFi-AWSCredentials</name>
+      <persistsState>false</persistsState>
+      <properties>
+        <entry>
+          <key>default-credentials</key>
+          <value>false</value>
+        </entry>
+        <entry>
+          <key>Access Key</key>
+        </entry>
+        <entry>
+          <key>Secret Key</key>
+        </entry>
+        <entry>
+          <key>Credentials File</key>
+        </entry>
+        <entry>
+          <key>profile-name</key>
+        </entry>
+        <entry>
+          <key>anonymous-credentials</key>
+          <value>false</value>
+        </entry>
+        <entry>
+          <key>Assume Role ARN</key>
+        </entry>
+        <entry>
+          <key>Assume Role Session Name</key>
+        </entry>
+        <entry>
+          <key>Session Time</key>
+          <value>3600</value>
+        </entry>
+        <entry>
+          <key>assume-role-external-id</key>
+        </entry>
+        <entry>
+          <key>assume-role-proxy-host</key>
+        </entry>
+        <entry>
+          <key>assume-role-proxy-port</key>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderControllerService</type>
+    </controllerServices>
+    <processGroups>
+      <id>5d6dcbec-c812-3981-0000-000000000000</id>
+      <parentGroupId>645f8f2c-44e5-3e5a-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <connections>
+          <id>bb30f37e-516b-3b9a-0000-000000000000</id>
+          <parentGroupId>5d6dcbec-c812-3981-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>5d6dcbec-c812-3981-0000-000000000000</groupId>
+            <id>d83a0f93-26e3-3ae6-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>5d6dcbec-c812-3981-0000-000000000000</groupId>
+            <id>3f2b2450-7661-3be1-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>67bb5ccf-de66-3bd2-0000-000000000000</id>
+          <parentGroupId>5d6dcbec-c812-3981-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>5d6dcbec-c812-3981-0000-000000000000</groupId>
+            <id>a2d9f744-64ea-3d88-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>5d6dcbec-c812-3981-0000-000000000000</groupId>
+            <id>d83a0f93-26e3-3ae6-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>1</zIndex>
+        </connections>
+        <processors>
+          <id>a2d9f744-64ea-3d88-0000-000000000000</id>
+          <parentGroupId>5d6dcbec-c812-3981-0000-000000000000</parentGroupId>
+          <position>
+            <x>-1727.7756278032211</x>
+            <y>-448.687976778283</y>
+          </position>
+          <bundle>
+            <artifact>nifi-standard-nar</artifact>
+            <group>org.apache.nifi</group>
+            <version>1.2.0</version>
+          </bundle>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Destination</key>
+                <value>
+                  <name>Destination</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Return Type</key>
+                <value>
+                  <name>Return Type</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Path Not Found Behavior</key>
+                <value>
+                  <name>Path Not Found Behavior</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Null Value Representation</key>
+                <value>
+                  <name>Null Value Representation</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.audience</key>
+                <value>
+                  <name>mpod.audience</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.data.owner</key>
+                <value>
+                  <name>mpod.data.owner</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.granularity</key>
+                <value>
+                  <name>mpod.granularity</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.identifies</key>
+                <value>
+                  <name>mpod.identifies</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.recency</key>
+                <value>
+                  <name>mpod.recency</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.release</key>
+                <value>
+                  <name>mpod.release</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.reliability</key>
+                <value>
+                  <name>mpod.reliability</name>
+                </value>
+              </entry>
+              <entry>
+                <key>mpod.sensitivity</key>
+                <value>
+                  <name>mpod.sensitivity</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Destination</key>
+                <value>flowfile-attribute</value>
+              </entry>
+              <entry>
+                <key>Return Type</key>
+                <value>auto-detect</value>
+              </entry>
+              <entry>
+                <key>Path Not Found Behavior</key>
+                <value>ignore</value>
+              </entry>
+              <entry>
+                <key>Null Value Representation</key>
+                <value>empty string</value>
+              </entry>
+              <entry>
+                <key>mpod.audience</key>
+                <value>$.Audience</value>
+              </entry>
+              <entry>
+                <key>mpod.data.owner</key>
+                <value>$.DataOwner</value>
+              </entry>
+              <entry>
+                <key>mpod.granularity</key>
+                <value>$.Granularity</value>
+              </entry>
+              <entry>
+                <key>mpod.identifies</key>
+                <value>$.Identifies</value>
+              </entry>
+              <entry>
+                <key>mpod.recency</key>
+                <value>$.Recency</value>
+              </entry>
+              <entry>
+                <key>mpod.release</key>
+                <value>$.Release</value>
+              </entry>
+              <entry>
+                <key>mpod.reliability</key>
+                <value>$.Reliability</value>
+              </entry>
+              <entry>
+                <key>mpod.sensitivity</key>
+                <value>$.Sensitivity</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>EvaluateJsonPath</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>matched</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>unmatched</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
+        </processors>
+        <processors>
+          <id>d83a0f93-26e3-3ae6-0000-000000000000</id>
+          <parentGroupId>5d6dcbec-c812-3981-0000-000000000000</parentGroupId>
+          <position>
+            <x>-1733.690175094432</x>
+            <y>-672.2811315331453</y>
+          </position>
+          <bundle>
+            <artifact>nifi-aws-nar</artifact>
+            <group>org.apache.nifi</group>
+            <version>1.2.0</version>
+          </bundle>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Bucket</key>
+                <value>
+                  <name>Bucket</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Object Key</key>
+                <value>
+                  <name>Object Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Region</key>
+                <value>
+                  <name>Region</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Access Key</key>
+                <value>
+                  <name>Access Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Secret Key</key>
+                <value>
+                  <name>Secret Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Credentials File</key>
+                <value>
+                  <name>Credentials File</name>
+                </value>
+              </entry>
+              <entry>
+                <key>AWS Credentials Provider service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService</identifiesControllerService>
+                  <name>AWS Credentials Provider service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Communications Timeout</key>
+                <value>
+                  <name>Communications Timeout</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Version</key>
+                <value>
+                  <name>Version</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                  <name>SSL Context Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Endpoint Override URL</key>
+                <value>
+                  <name>Endpoint Override URL</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Signer Override</key>
+                <value>
+                  <name>Signer Override</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Proxy Host</key>
+                <value>
+                  <name>Proxy Host</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Proxy Host Port</key>
+                <value>
+                  <name>Proxy Host Port</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Bucket</key>
+                <value>${s3.bucket}</value>
+              </entry>
+              <entry>
+                <key>Object Key</key>
+                <value>${filename}</value>
+              </entry>
+              <entry>
+                <key>Region</key>
+                <value>eu-west-1</value>
+              </entry>
+              <entry>
+                <key>Access Key</key>
+              </entry>
+              <entry>
+                <key>Secret Key</key>
+              </entry>
+              <entry>
+                <key>Credentials File</key>
+              </entry>
+              <entry>
+                <key>AWS Credentials Provider service</key>
+                <value>e8c4dd21-498a-325b-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>Communications Timeout</key>
+                <value>30 secs</value>
+              </entry>
+              <entry>
+                <key>Version</key>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+              </entry>
+              <entry>
+                <key>Endpoint Override URL</key>
+              </entry>
+              <entry>
+                <key>Signer Override</key>
+                <value>Default Signature</value>
+              </entry>
+              <entry>
+                <key>Proxy Host</key>
+              </entry>
+              <entry>
+                <key>Proxy Host Port</key>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>FetchS3Object</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style>
+            <entry>
+              <key>background-color</key>
+              <value>#e81919</value>
+            </entry>
+          </style>
+          <type>org.apache.nifi.processors.aws.s3.FetchS3Object</type>
+        </processors>
+        <processors>
+          <id>3f2b2450-7661-3be1-0000-000000000000</id>
+          <parentGroupId>5d6dcbec-c812-3981-0000-000000000000</parentGroupId>
+          <position>
+            <x>-1732.7707074514765</x>
+            <y>-901.2458298890588</y>
+          </position>
+          <bundle>
+            <artifact>nifi-aws-nar</artifact>
+            <group>org.apache.nifi</group>
+            <version>1.2.0</version>
+          </bundle>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Bucket</key>
+                <value>
+                  <name>Bucket</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Region</key>
+                <value>
+                  <name>Region</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Access Key</key>
+                <value>
+                  <name>Access Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Secret Key</key>
+                <value>
+                  <name>Secret Key</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Credentials File</key>
+                <value>
+                  <name>Credentials File</name>
+                </value>
+              </entry>
+              <entry>
+                <key>AWS Credentials Provider service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService</identifiesControllerService>
+                  <name>AWS Credentials Provider service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Communications Timeout</key>
+                <value>
+                  <name>Communications Timeout</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                  <name>SSL Context Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Endpoint Override URL</key>
+                <value>
+                  <name>Endpoint Override URL</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Signer Override</key>
+                <value>
+                  <name>Signer Override</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Proxy Host</key>
+                <value>
+                  <name>Proxy Host</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Proxy Host Port</key>
+                <value>
+                  <name>Proxy Host Port</name>
+                </value>
+              </entry>
+              <entry>
+                <key>delimiter</key>
+                <value>
+                  <name>delimiter</name>
+                </value>
+              </entry>
+              <entry>
+                <key>prefix</key>
+                <value>
+                  <name>prefix</name>
+                </value>
+              </entry>
+              <entry>
+                <key>use-versions</key>
+                <value>
+                  <name>use-versions</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Bucket</key>
+                <value>nifi-data-in</value>
+              </entry>
+              <entry>
+                <key>Region</key>
+                <value>eu-west-1</value>
+              </entry>
+              <entry>
+                <key>Access Key</key>
+              </entry>
+              <entry>
+                <key>Secret Key</key>
+              </entry>
+              <entry>
+                <key>Credentials File</key>
+              </entry>
+              <entry>
+                <key>AWS Credentials Provider service</key>
+                <value>e8c4dd21-498a-325b-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>Communications Timeout</key>
+                <value>30 secs</value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+              </entry>
+              <entry>
+                <key>Endpoint Override URL</key>
+              </entry>
+              <entry>
+                <key>Signer Override</key>
+                <value>Default Signature</value>
+              </entry>
+              <entry>
+                <key>Proxy Host</key>
+              </entry>
+              <entry>
+                <key>Proxy Host Port</key>
+              </entry>
+              <entry>
+                <key>delimiter</key>
+              </entry>
+              <entry>
+                <key>prefix</key>
+              </entry>
+              <entry>
+                <key>use-versions</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>ListS3</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style>
+            <entry>
+              <key>background-color</key>
+              <value>#e81515</value>
+            </entry>
+          </style>
+          <type>org.apache.nifi.processors.aws.s3.ListS3</type>
+        </processors>
+      </contents>
+      <name>MPoD</name>
+    </processGroups>
+  </snippet>
+  <timestamp>09/19/2017 12:03:27 UTC</timestamp>
+</template>
