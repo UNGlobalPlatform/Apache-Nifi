@@ -6,7 +6,9 @@ This respository contains various experimental templates to prove the capabiliti
 
 ### Prerequisites
 
-You will need a NiFi instanace up and running. Try this AMI 
+You will need a NiFi instanace up and running. Try this AMI https://aws.amazon.com/marketplace/pp/B01CPWX4KI
+
+Were possible, all credentials or api keys are provided by the controller service. These will need to be configured with your access keys, etc.
 
 ### Installing
 
